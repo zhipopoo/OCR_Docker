@@ -1,0 +1,216 @@
+-- MySQL dump 10.13  Distrib 8.0.19, for Win64 (x86_64)
+--
+-- Host: 47.242.251.57    Database: ocr
+-- ------------------------------------------------------
+-- Server version	8.0.32
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!50503 SET NAMES utf8mb4 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `cls_batch`
+--
+
+DROP TABLE IF EXISTS `cls_batch`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `cls_batch` (
+  `cls_batch_id` varchar(16) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `cls_batch_client` varchar(40) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `cls_batch_coll_id` varchar(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `cls_batch_format` varchar(4) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `cls_batch_input_file` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `cls_batch_input_file_md5` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `cls_batch_input_file_password` varchar(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `cls_batch_input_file_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `cls_batch_response` varchar(16) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `cls_batch_result` varchar(16) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `cls_batch_timestamp` datetime(6) NOT NULL,
+  PRIMARY KEY (`cls_batch_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `cls_batch`
+--
+
+LOCK TABLES `cls_batch` WRITE;
+/*!40000 ALTER TABLE `cls_batch` DISABLE KEYS */;
+INSERT INTO `cls_batch` VALUES ('0053000000000034','0:0:0:0:0:0:0:1','123456','tif','1688711783171.tif','9798eeabc10bb6d4300e1ff5c06ecf97','',NULL,NULL,'Successful','2023-07-07 14:36:37.000000'),('0053000000000035','0:0:0:0:0:0:0:1','123456','pdf','1688715899332.pdf',NULL,NULL,NULL,NULL,'Successful','2023-07-07 15:45:53.000000'),('0053000000000036','0:0:0:0:0:0:0:1','123456','pdf',NULL,NULL,NULL,NULL,NULL,'Fail','2023-07-07 16:05:05.000000'),('0053000000000037','0:0:0:0:0:0:0:1','123456','pdf',NULL,NULL,NULL,NULL,NULL,'Fail','2023-07-07 16:05:26.000000'),('0053000000000038','0:0:0:0:0:0:0:1','123456','tiff',NULL,NULL,NULL,NULL,NULL,'Fail','2023-07-07 16:05:51.000000'),('0053000000000039','0:0:0:0:0:0:0:1','123456','tif','1688717155790.tif',NULL,NULL,NULL,NULL,'Successful','2023-07-07 16:06:10.000000'),('0053000000000040','0:0:0:0:0:0:0:1','123456','pdf','1689042134921.pdf',NULL,NULL,NULL,NULL,'Successful','2023-07-11 10:23:38.000000'),('0053000000000041','0:0:0:0:0:0:0:1','123456','tif','1689043156113.tif','9798eeabc10bb6d4300e1ff5c06ecf97','',NULL,NULL,'Successful','2023-07-11 10:39:59.000000'),('0053000000000042','0:0:0:0:0:0:0:1','123456','pdf','1689043548241.pdf',NULL,NULL,NULL,NULL,'Successful','2023-07-11 10:47:16.000000'),('0053000000000043','0:0:0:0:0:0:0:1','123456','tif','1689043663216.tif','9798eeabc10bb6d4300e1ff5c06ecf97','',NULL,NULL,'Successful','2023-07-11 10:48:13.000000'),('0053000000000044','0:0:0:0:0:0:0:1','123456','pdf','1689045306951.pdf',NULL,NULL,NULL,NULL,'Successful','2023-07-11 11:15:51.000000'),('0053000000000045','0:0:0:0:0:0:0:1','123456','pdf','1689045683184.pdf',NULL,NULL,NULL,NULL,'Successful','2023-07-11 11:22:03.000000'),('0053000000000046','0:0:0:0:0:0:0:1','123456','pdf','1689046962624.pdf',NULL,NULL,NULL,NULL,'Successful','2023-07-11 11:43:22.000000'),('0053000000000047','0:0:0:0:0:0:0:1','123456','pdf','1689047536118.pdf',NULL,NULL,NULL,NULL,'Successful','2023-07-11 11:52:55.000000'),('0053000000000048','0:0:0:0:0:0:0:1','123456','pdf','1689049748004.pdf',NULL,NULL,NULL,NULL,'Successful','2023-07-11 12:29:48.000000'),('0053000000000049','0:0:0:0:0:0:0:1','123456','pdf','1689063354944.pdf',NULL,NULL,NULL,NULL,'Successful','2023-07-11 16:16:35.000000'),('0053000000000050','0:0:0:0:0:0:0:1','123456','pdf','1689064855959.pdf',NULL,NULL,NULL,NULL,'Successful','2023-07-11 16:41:32.000000'),('0053000000000051','0:0:0:0:0:0:0:1','123456','pdf','1689065876352.pdf',NULL,NULL,NULL,NULL,'Successful','2023-07-11 16:58:27.000000'),('0053000000000052','0:0:0:0:0:0:0:1','123456','pdf','1689066307743.pdf',NULL,NULL,NULL,NULL,'Successful','2023-07-11 17:05:47.000000'),('0053000000000053','0:0:0:0:0:0:0:1','123456','pdf','1689066609482.pdf',NULL,NULL,NULL,NULL,'Successful','2023-07-11 17:10:44.000000'),('0053000000000054','0:0:0:0:0:0:0:1','123456','tiff',NULL,'9798eeabc10bb6d4300e1ff5c06ecf97','',NULL,NULL,'Fail','2023-07-11 17:22:39.000000'),('0053000000000055','0:0:0:0:0:0:0:1','123456','tiff',NULL,'9798eeabc10bb6d4300e1ff5c06ecf97','',NULL,NULL,'Fail','2023-07-11 17:22:51.000000'),('0053000000000056','0:0:0:0:0:0:0:1','123456','tiff',NULL,'9798eeabc10bb6d4300e1ff5c06ecf97','',NULL,NULL,'Fail','2023-07-11 17:23:55.000000'),('0053000000000057','0:0:0:0:0:0:0:1','123456','tiff',NULL,'9798eeabc10bb6d4300e1ff5c06ecf97','',NULL,NULL,'Fail','2023-07-11 17:25:48.000000'),('0053000000000058','0:0:0:0:0:0:0:1','123456','tiff',NULL,'9798eeabc10bb6d4300e1ff5c06ecf97','',NULL,NULL,'Fail','2023-07-11 17:26:15.000000'),('0053000000000059','0:0:0:0:0:0:0:1','123456','tiff',NULL,'9798eeabc10bb6d4300e1ff5c06ecf97','',NULL,NULL,'Fail','2023-07-11 17:27:28.000000'),('0053000000000060','0:0:0:0:0:0:0:1','123456','tiff',NULL,'9798eeabc10bb6d4300e1ff5c06ecf97','',NULL,NULL,'Fail','2023-07-11 17:27:40.000000'),('0053000000000061','0:0:0:0:0:0:0:1','123456','tif',NULL,'9798eeabc10bb6d4300e1ff5c06ecf97','',NULL,NULL,'Fail','2023-07-11 17:28:40.000000'),('0053000000000062','0:0:0:0:0:0:0:1','123456','tif',NULL,'9798eeabc10bb6d4300e1ff5c06ecf97','',NULL,NULL,'Fail','2023-07-11 17:28:54.000000'),('0053000000000063','0:0:0:0:0:0:0:1','123456','tif',NULL,'9798eeabc10bb6d4300e1ff5c06ecf97','',NULL,NULL,'Fail','2023-07-11 17:29:54.000000'),('0053000000000064','0:0:0:0:0:0:0:1','123456','tif',NULL,'9798eeabc10bb6d4300e1ff5c06ecf97','',NULL,NULL,'Fail','2023-07-11 17:33:56.000000'),('0053000000000065','0:0:0:0:0:0:0:1','123456','tif','1689068629738.tif','28a7c60c9837ffa50e6262dfe3752610','',NULL,NULL,'Successful','2023-07-11 17:44:14.000000'),('0053000000000066','0:0:0:0:0:0:0:1','123456','tif','1689233184549.tif','28a7c60c9837ffa50e6262dfe3752610','',NULL,NULL,'Successful','2023-07-13 15:27:01.000000'),('0053000000000067','0:0:0:0:0:0:0:1','123456','tif','1689235314293.tif','28a7c60c9837ffa50e6262dfe3752610','',NULL,NULL,'Successful','2023-07-13 16:02:16.000000'),('0053000000000068','0:0:0:0:0:0:0:1','123456','pdf','1689235345517.pdf',NULL,NULL,NULL,NULL,'Successful','2023-07-13 16:03:02.000000'),('0053000000000069','0:0:0:0:0:0:0:1','123456','pdf','1689237930814.pdf',NULL,NULL,NULL,NULL,'Successful','2023-07-13 16:47:00.000000'),('0053000000000070','0:0:0:0:0:0:0:1','123456','tif','1689238049256.tif','28a7c60c9837ffa50e6262dfe3752610','',NULL,NULL,'Successful','2023-07-13 16:47:52.000000'),('0053000000000071','0:0:0:0:0:0:0:1','123456','tif','1689239422228.tif','28a7c60c9837ffa50e6262dfe3752610','',NULL,NULL,'Successful','2023-07-13 17:11:16.000000'),('0053000000000072','0:0:0:0:0:0:0:1','123456','pdf','1689239786275.pdf',NULL,NULL,NULL,NULL,'Successful','2023-07-13 17:17:28.000000'),('0053000000000073','172.17.0.1','123456','tif',NULL,'28a7c60c9837ffa50e6262dfe3752610','',NULL,NULL,'Fail','2023-08-17 12:11:20.484000'),('0053000000000074','172.17.0.1','123456','tif',NULL,'28a7c60c9837ffa50e6262dfe3752610','',NULL,NULL,'Fail','2023-08-17 18:40:29.250000'),('0053000000000075','172.17.0.1','123456','tif',NULL,'28a7c60c9837ffa50e6262dfe3752610','',NULL,NULL,'Fail','2023-08-18 10:07:49.036000'),('0053000000000076','172.17.0.1','123456','tif','1692778182929.tif','28a7c60c9837ffa50e6262dfe3752610','',NULL,NULL,'Successful','2023-08-23 16:09:49.341000'),('0053000000000077','172.17.0.1','123456','tif','1693203374218.tif','28a7c60c9837ffa50e6262dfe3752610','',NULL,NULL,'Successful','2023-08-28 14:16:20.931000'),('0053000000000078','172.17.0.1','123456','tif','1693447523655.tif','28a7c60c9837ffa50e6262dfe3752610','',NULL,NULL,'Successful','2023-08-31 10:05:31.082000'),('0053000000000079','172.17.0.1','123456','tif','1693447686739.tif','28a7c60c9837ffa50e6262dfe3752610','',NULL,NULL,'Successful','2023-08-31 10:08:26.802000'),('0053000000000080','172.17.0.1','123456','tif','1693453347980.tif','28a7c60c9837ffa50e6262dfe3752610','',NULL,NULL,'Successful','2023-08-31 11:43:33.243000'),('0053000000000081','172.17.0.1','123456','tif','1693473269650.tif','28a7c60c9837ffa50e6262dfe3752610','',NULL,NULL,'Successful','2023-08-31 17:14:53.087000'),('0053000000000082','172.17.0.1','123456','pdf',NULL,NULL,NULL,NULL,NULL,'Fail','2023-08-31 17:16:59.665000'),('0053000000000083','172.17.0.1','123456','pdf','1693473526103.pdf',NULL,NULL,NULL,NULL,'Successful','2023-08-31 17:19:35.930000'),('0053000000000084','172.17.0.1','123456','pdf','1693473629396.pdf',NULL,NULL,NULL,NULL,'Successful','2023-08-31 17:21:14.686000'),('0053000000000085','172.17.0.1','123456','pdf','1693473863811.pdf',NULL,NULL,NULL,NULL,'Successful','2023-08-31 17:25:12.296000'),('0053000000000086','172.17.0.1','123456','tiff',NULL,NULL,NULL,NULL,NULL,'Fail','2023-09-01 10:55:25.025000'),('0053000000000087','172.17.0.1','123456','tiff',NULL,NULL,NULL,NULL,NULL,'Fail','2023-09-01 10:56:17.200000'),('0053000000000088','172.17.0.1','123456','tiff',NULL,NULL,NULL,NULL,NULL,'Fail','2023-09-01 10:56:51.585000'),('0053000000000089','172.17.0.1','123456','tiff',NULL,NULL,NULL,NULL,NULL,'Fail','2023-09-01 12:09:49.003000'),('0053000000000090','172.17.0.1','123456','tif',NULL,NULL,NULL,NULL,NULL,'Fail','2023-09-01 12:10:54.148000'),('0053000000000091','172.17.0.1','123456','tif','1693541482732.tif',NULL,NULL,NULL,NULL,'Successful','2023-09-01 12:11:45.366000'),('0053000000000092','172.17.0.1','123456','tif','1693554766545.tif',NULL,NULL,NULL,NULL,'Successful','2023-09-01 15:53:17.575000'),('0053000000000093','172.17.0.1','123456','tif','1693563723507.tif',NULL,NULL,NULL,NULL,'Successful','2023-09-01 18:23:01.628000'),('0053000000000094','172.17.0.1','123456','pdf','1693564287964.pdf',NULL,NULL,NULL,NULL,'Successful','2023-09-01 18:33:40.899000'),('0053000000000095','172.17.0.1','123456','tif','1693564697702.tif','28a7c60c9837ffa50e6262dfe3752610','',NULL,NULL,'Successful','2023-09-01 18:39:13.711000'),('0053000000000096','172.17.0.1','123456','pdf',NULL,'28a7c60c9837ffa50e6262dfe3752610','',NULL,NULL,'Fail','2023-09-04 14:36:43.843000'),('0053000000000097','172.17.0.1','123456','pdf',NULL,'28a7c60c9837ffa50e6262dfe3752610','',NULL,NULL,'Fail','2023-09-04 14:43:56.118000'),('0053000000000098','172.17.0.1','123456','tif','1693809887880.tif','28a7c60c9837ffa50e6262dfe3752610','',NULL,NULL,'Successful','2023-09-04 14:45:13.733000'),('0053000000000099','172.17.0.1','123456','tif',NULL,'28a7c60c9837ffa50e6262dfe3752610','',NULL,NULL,'Fail','2023-09-04 14:46:29.552000'),('0053000000000100','172.17.0.1','123456','pdf','1693811764141.pdf','d7e2251b6ac2103b51a07bc572f5204f','',NULL,NULL,'Successful','2023-09-04 15:16:59.978000'),('0053000000000101','172.17.0.1','123456','tif','1694069736208.tif','28a7c60c9837ffa50e6262dfe3752610','',NULL,NULL,'Successful','2023-09-07 14:55:58.279000'),('0053000000000102','172.17.0.1','123456','tif',NULL,NULL,NULL,NULL,NULL,'Fail','2023-09-07 15:37:08.943000'),('0053000000000103','172.17.0.1','123456','tif','1694072252473.tif',NULL,NULL,NULL,NULL,'Successful','2023-09-07 15:37:55.591000'),('0053000000000104','172.17.0.1','123456','tif','1694072326646.tif',NULL,NULL,NULL,NULL,'Successful','2023-09-07 15:39:08.831000'),('0053000000000105','172.17.0.1','123456','pdf','1694072447610.pdf',NULL,NULL,NULL,NULL,'Successful','2023-09-07 15:41:39.659000'),('0053000000000106','172.17.0.1','123456','pdf','1694077460663.pdf',NULL,NULL,NULL,NULL,'Successful','2023-09-07 17:05:02.784000'),('0053000000000107','172.17.0.1','123456','pdf','1694086445401.pdf',NULL,NULL,NULL,NULL,'Successful','2023-09-07 19:34:50.654000'),('0053000000000108','172.17.0.1','123456','pdf','1694087165112.pdf',NULL,NULL,NULL,NULL,'Successful','2023-09-07 19:46:46.697000'),('0053000000000109','172.17.0.1','123456','pdf','1694087388659.pdf',NULL,NULL,NULL,NULL,'Successful','2023-09-07 19:50:33.742000'),('0053000000000110','172.17.0.1','123456','pdf','1694087535866.pdf',NULL,NULL,NULL,NULL,'Successful','2023-09-07 19:52:58.295000'),('0053000000000111','172.17.0.1','123456','pdf','1694087606946.pdf',NULL,NULL,NULL,NULL,'Successful','2023-09-07 19:54:13.382000'),('0053000000000112','172.17.0.1','123456','tif','1695022293637.tif','28a7c60c9837ffa50e6262dfe3752610','',NULL,NULL,'Successful','2023-09-18 15:31:54.435000'),('0053000000000113','172.17.0.1','123456','tif','1695023623907.tif','28a7c60c9837ffa50e6262dfe3752610','',NULL,NULL,'Successful','2023-09-18 15:54:04.666000'),('0053000000000114','172.17.0.1','123456','pdf','1695024077018.pdf',NULL,NULL,NULL,NULL,'Successful','2023-09-18 16:02:00.300000'),('0053000000000115','172.17.0.1','123456','pdf','1695024204316.pdf',NULL,NULL,NULL,NULL,'Successful','2023-09-18 16:04:08.708000'),('0053000000000116','172.17.0.1','123456','tif','1695024258426.tif',NULL,NULL,NULL,NULL,'Successful','2023-09-18 16:04:40.981000'),('0053000000000117','172.17.0.1','123456','tif','1695024287336.tif','28a7c60c9837ffa50e6262dfe3752610','',NULL,NULL,'Successful','2023-09-18 16:05:10.896000'),('0053000000000118','172.17.0.1','123456','pdf','1695024331223.pdf','d7e2251b6ac2103b51a07bc572f5204f','',NULL,NULL,'Successful','2023-09-18 16:06:16.559000'),('0053000000000119','172.17.0.1','123456','pdf','1695025762097.pdf',NULL,NULL,NULL,NULL,'Successful','2023-09-18 16:30:06.887000'),('0053000000000120','172.17.0.1','123456','tif',NULL,'28a7c60c9837ffa50e6262dfe3752610','',NULL,NULL,'Fail','2023-10-26 16:34:30.319000'),('0053000000000121','172.17.0.1','123456','tif','1698374182280.tif','28a7c60c9837ffa50e6262dfe3752610','',NULL,NULL,'Successful','2023-10-27 10:36:42.555000');
+/*!40000 ALTER TABLE `cls_batch` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `cls_template`
+--
+
+DROP TABLE IF EXISTS `cls_template`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `cls_template` (
+  `cls_template_id` varchar(16) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `cls_template_config_filepath` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `cls_template_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `cls_template_filepath` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `cls_template_creation_date` datetime NOT NULL,
+  PRIMARY KEY (`cls_template_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `cls_template`
+--
+
+LOCK TABLES `cls_template` WRITE;
+/*!40000 ALTER TABLE `cls_template` DISABLE KEYS */;
+INSERT INTO `cls_template` VALUES ('0052000000000003','GF200 - Improved.pdf','1689563495050.xml','','2023-07-07 14:31:15'),('0052000000000004','GF200 - Improved.pdf','1694424450548.xml','GF200','2023-09-11 17:27:31');
+/*!40000 ALTER TABLE `cls_template` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `mis_user`
+--
+
+DROP TABLE IF EXISTS `mis_user`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `mis_user` (
+  `mis_user_id` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL COMMENT '用户ID',
+  `mis_user_name` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL COMMENT '用户账号',
+  `mis_user_login_id` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL COMMENT '用户昵称',
+  `mis_user_type` varchar(2) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT '00' COMMENT '用户类型（00系统用户）',
+  `mis_email` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT '' COMMENT '用户邮箱',
+  `mis_user_password` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT '' COMMENT '密码',
+  `mis_user_status` char(1) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT '0' COMMENT '帐号状态（0正常 1停用）',
+  `del_flag` char(1) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT '0' COMMENT '删除标志（0代表存在 2代表删除）',
+  `mis_user_location` varchar(128) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT '' COMMENT '最后登录IP',
+  `login_date` datetime DEFAULT NULL COMMENT '最后登录时间',
+  `create_by` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT '' COMMENT '创建者',
+  `create_time` datetime DEFAULT NULL COMMENT '创建时间',
+  `update_by` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT '' COMMENT '更新者',
+  `update_time` datetime DEFAULT NULL COMMENT '更新时间',
+  `remark` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL COMMENT '备注',
+  `avatar` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  PRIMARY KEY (`mis_user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='用户信息表';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `mis_user`
+--
+
+LOCK TABLES `mis_user` WRITE;
+/*!40000 ALTER TABLE `mis_user` DISABLE KEYS */;
+INSERT INTO `mis_user` VALUES ('8888000000000001','李四','admin',NULL,'9156278355@qq.com','mvYzQCH7HiDODbf12jaSkA==',NULL,NULL,'湖南',NULL,'0008963258741121','2022-10-27 13:37:33','0008963258741121','2022-10-27 15:43:45',NULL,NULL);
+/*!40000 ALTER TABLE `mis_user` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `ocr_batch`
+--
+
+DROP TABLE IF EXISTS `ocr_batch`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `ocr_batch` (
+  `ocr_batch_id` varchar(16) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `ocr_batch_coll_id` varchar(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `ocr_batch_client` varchar(40) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `ocr_batch_input_file` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `ocr_batch_input_file_md5` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `ocr_batch_input_file_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `ocr_batch_input_file_password` varchar(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `ocr_batch_format` varchar(4) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `ocr_batch_timestamp` datetime NOT NULL,
+  `ocr_batch_out_file` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `ocr_batch_out_file_md5` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `ocr_batch_out_file_password` varchar(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `ocr_batch_result` varchar(16) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  PRIMARY KEY (`ocr_batch_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `ocr_batch`
+--
+
+LOCK TABLES `ocr_batch` WRITE;
+/*!40000 ALTER TABLE `ocr_batch` DISABLE KEYS */;
+INSERT INTO `ocr_batch` VALUES ('0050000000000001','123456','0:0:0:0:0:0:0:1','1669773053581.pdf','e07d95290b3963452c979f4911c588a0','','','pdf','2022-11-30 09:50:54',NULL,NULL,NULL,'Fail'),('0050000000000002','123456','0:0:0:0:0:0:0:1','1669773193865.pdf','e07d95290b3963452c979f4911c588a0','','','pdf','2022-11-30 09:53:14',NULL,NULL,NULL,'Fail'),('0050000000000003','123456','0:0:0:0:0:0:0:1','1669773301679.pdf','e07d95290b3963452c979f4911c588a0','','','pdf','2022-11-30 09:55:07','1669773301682.pdf','bc2dd804b0dd1e404eb1356269ebb035','','Successful'),('0050000000000004','123456','0:0:0:0:0:0:0:1','1688367310718.pdf','e07d95290b3963452c979f4911c588a0','','','pdf','2023-07-03 14:55:41','1688367310718.pdf','883102ef5d82e3ce4c0aa23a326b627b','','Successful'),('0050000000000005','123456','0:0:0:0:0:0:0:1','1688367426794.pdf','e07d95290b3963452c979f4911c588a0','','','pdf','2023-07-03 14:57:33','1688367426794.pdf','f80262bfb585c8680261e20fec461758','','Successful'),('0050000000000006','123456','0:0:0:0:0:0:0:1','1688548045100.pdf','e07d95290b3963452c979f4911c588a0','','','pdf','2023-07-05 17:07:35','1688548045100.pdf','3e025447255a0fbbfd5fdf5cbf253f0b','','Successful'),('0050000000000007','123456','0:0:0:0:0:0:0:1','1688699622346.pdf','e07d95290b3963452c979f4911c588a0','','','pdf','2023-07-07 11:13:51','1688699622346.pdf','6f31fd3610737c7535c3102658e09c9d','','Successful'),('0050000000000008','123456','192.168.199.1','1692772108068.jpg','e07d95290b3963452c979f4911c588a0','','','pdf','2023-08-23 14:28:30','1692772108068.pdf','d41d8cd98f00b204e9800998ecf8427e','','Successful'),('0050000000000009','123456','192.168.199.1','1692775957613.jpg','e07d95290b3963452c979f4911c588a0','','','pdf','2023-08-23 15:32:42','1692775957613.pdf','d41d8cd98f00b204e9800998ecf8427e','','Successful'),('0050000000000010','123456','172.17.0.1','1692777748782.jpg','e07d95290b3963452c979f4911c588a0','','','pdf','2023-08-23 16:02:30',NULL,NULL,NULL,'Fail'),('0050000000000011','123456','172.17.0.1','1692777844997.jpg','e07d95290b3963452c979f4911c588a0','','','pdf','2023-08-23 16:04:06',NULL,NULL,NULL,'Fail'),('0050000000000012','123456','172.17.0.1','1692777958870.jpg','e07d95290b3963452c979f4911c588a0','','','pdf','2023-08-23 16:06:01','1692777958870.pdf','d41d8cd98f00b204e9800998ecf8427e','','Successful'),('0050000000000013','123456','172.17.0.1','1692785327589.jpg','e07d95290b3963452c979f4911c588a0','','','pdf','2023-08-23 18:08:49','1692785327589.pdf','d41d8cd98f00b204e9800998ecf8427e','','Successful');
+/*!40000 ALTER TABLE `ocr_batch` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `ocr_config`
+--
+
+DROP TABLE IF EXISTS `ocr_config`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `ocr_config` (
+  `ocr_config_id` varchar(16) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `ocr_config_key` varchar(40) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `ocr_config_value` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  PRIMARY KEY (`ocr_config_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `ocr_config`
+--
+
+LOCK TABLES `ocr_config` WRITE;
+/*!40000 ALTER TABLE `ocr_config` DISABLE KEYS */;
+INSERT INTO `ocr_config` VALUES ('0061000000000002','TEMPLATES_PATH','/hostData/temp/templates/'),('0061000000000003','TEMP_LOCATION','/hostData/ocr/'),('0061000000000004','CROPPINGS_PATH','/hostData/temp/templates/croppings/');
+/*!40000 ALTER TABLE `ocr_config` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `ocr_sequence`
+--
+
+DROP TABLE IF EXISTS `ocr_sequence`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `ocr_sequence` (
+  `seq_name` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `create_time` datetime DEFAULT NULL,
+  `cur_no` int DEFAULT NULL,
+  `prefix` varchar(16) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `update_time` datetime NOT NULL,
+  PRIMARY KEY (`seq_name`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `ocr_sequence`
+--
+
+LOCK TABLES `ocr_sequence` WRITE;
+/*!40000 ALTER TABLE `ocr_sequence` DISABLE KEYS */;
+INSERT INTO `ocr_sequence` VALUES ('cls_batch','2023-06-15 00:00:00',122,'0053','2023-06-15 00:00:00'),('cls_template','2023-06-21 00:00:00',1,'0052','2023-06-21 00:00:00'),('mis_user','2022-11-23 00:00:00',1,'0060','2022-11-23 00:00:00'),('ocr_batch','2022-11-04 00:00:00',14,'0050','2022-11-04 00:00:00'),('ocr_config','2022-11-24 00:00:00',1,'0061','2022-11-24 00:00:00');
+/*!40000 ALTER TABLE `ocr_sequence` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Dumping routines for database 'ocr'
+--
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2023-10-30 14:31:23

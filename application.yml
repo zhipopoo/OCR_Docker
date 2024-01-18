@@ -1,0 +1,23 @@
+server:
+  port: 8083
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/ocr?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8
+    username: root
+    password: 
+  jpa:
+    database: MySQL
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+spring-aop-auto: true
+async:
+  executor:
+    thread:
+      corePoolSize: 10
+      maxPoolSize: 100
+      keepAliveSeconds: 300
+      queueCapacity: 50
+      name:
+        prefix : async-service-
