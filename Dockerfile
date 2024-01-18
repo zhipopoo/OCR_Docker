@@ -87,10 +87,10 @@ VOLUME /hostData
 COPY /hostData /hostData
 
 #install mysql
-RUN sudo apt-get update -y && \ 
-	sudo DEBIAN_FRONTEND=noninteractive apt-get install mysql-server -y
-COPY *.sh setup.sh
-COPY *.sql ocr.sql
+# RUN sudo apt-get update -y && \ 
+# 	sudo DEBIAN_FRONTEND=noninteractive apt-get install mysql-server -y
+# COPY *.sh setup.sh
+# COPY *.sql ocr.sql
 
 
 # copy jar, run springboot app
