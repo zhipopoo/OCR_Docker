@@ -87,10 +87,9 @@ VOLUME /hostData
 COPY /hostData /hostData
 
 #install mysql
-RUN  apt-get update -y && \ 
-	 DEBIAN_FRONTEND=noninteractive apt-get install mysql-server -y
-#COPY *.sh setup.sh
-COPY *.sql ocr.sql
+# RUN  apt-get update -y && \ 
+# 	 DEBIAN_FRONTEND=noninteractive apt-get install mysql-server -y
+# COPY *.sql ocr.sql
 
 # Delete packages
 RUN rm jdk-8u191-linux-x64.tar.gz && \ 
