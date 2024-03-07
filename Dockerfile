@@ -18,7 +18,7 @@ ENV PATH=${JAVA_HOME}/bin:$PATH
 RUN export PATH
 
 RUN apt-get update -y && \ 
-	apt-get install build-essential autoconf automake libtool autoconf-archive pkg-config libpng-dev libjpeg8-dev libtiff5-dev zlib1g-dev wget ant cmake x11-xserver-utils libgtk-3-0 openjfx -y 
+	apt-get install build-essential autoconf automake libtool autoconf-archive pkg-config libpng-dev libjpeg8-dev libtiff5-dev zlib1g-dev wget ant cmake x11-xserver-utils libgtk-3-0 openjfx xvfb -y 
 
 # RUN xhost +
 
@@ -89,7 +89,7 @@ COPY /hostData /hostData
 #install mysql
 RUN sudo apt-get update -y && \ 
 	sudo DEBIAN_FRONTEND=noninteractive apt-get install mysql-server -y
-COPY *.sh setup.sh
+#COPY *.sh setup.sh
 COPY *.sql ocr.sql
 
 
@@ -98,12 +98,14 @@ VOLUME /tmp
 COPY prd007.jar app.jar
 COPY *.yml application.yml
 
+COPY ocr_service.sh ocr_service.sh
+
 ENV DISPLAY=:0.0
 RUN export DISPLAY
 
-#ENTRYPOINT ["java","-jar","/app.jar"]
+ENTRYPOINT ["sh","ocr_service.sh"]
 #CMD java -version
 
-CMD ["/bin/bash"]
+#CMD ["/bin/bash"]
 
 EXPOSE 8083
