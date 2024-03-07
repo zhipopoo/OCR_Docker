@@ -18,7 +18,7 @@ ENV PATH=${JAVA_HOME}/bin:$PATH
 RUN export PATH
 
 RUN apt-get update -y && \ 
-	apt-get install build-essential autoconf automake libtool autoconf-archive pkg-config libpng-dev libjpeg8-dev libtiff5-dev zlib1g-dev wget ant cmake x11-xserver-utils libgtk-3-0 openjfx xvfb -y 
+	apt-get install build-essential autoconf automake libtool autoconf-archive pkg-config libpng-dev libjpeg8-dev libtiff5-dev zlib1g-dev wget ant cmake libgtk-3-0 openjfx xvfb -y 
 
 # RUN xhost +
 
