@@ -12,4 +12,4 @@ exit
 EOF
 
 ulimit -n 2000
-xvfb-run java -Dsun.java2d.cmm=sun.java2d.cmm.kcms.KcmsServiceProvider -jar app.jar -jar app.jar -Xms1024m -Xmx2048m
+xvfb-run java -Dsun.java2d.cmm=sun.java2d.cmm.kcms.KcmsServiceProvider -jar app.jar -Xms1024m -Xmx2048m
