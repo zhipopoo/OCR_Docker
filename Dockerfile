@@ -104,8 +104,5 @@ ENV DISPLAY=:0.0
 RUN export DISPLAY
 
 ENTRYPOINT ["sh","ocr_service.sh"]
-#CMD java -version
-
-#CMD ["/bin/bash"]
 
 EXPOSE 8083
