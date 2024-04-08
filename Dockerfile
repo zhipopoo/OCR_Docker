@@ -1,4 +1,4 @@
-FROM dorowu/ubuntu-desktop-lxde-vnc:xenial
+FROM ubuntu:16.04
 
 #install java
 COPY jdk-8u191-linux-x64.tar.gz  .
@@ -18,7 +18,7 @@ ENV PATH=${JAVA_HOME}/bin:$PATH
 RUN export PATH
 
 RUN apt-get update -y && \ 
-	apt-get install build-essential autoconf automake libtool autoconf-archive pkg-config libpng-dev libjpeg8-dev libtiff5-dev zlib1g-dev wget ant cmake x11-xserver-utils libgtk-3-0 openjfx xvfb -y 
+	apt-get install build-essential autoconf automake libtool autoconf-archive pkg-config libpng-dev libjpeg8-dev libtiff5-dev zlib1g-dev wget ant cmake libgtk-3-0 openjfx xvfb -y 
 
 # RUN xhost +
 
@@ -87,11 +87,15 @@ VOLUME /hostData
 COPY /hostData /hostData
 
 #install mysql
-RUN sudo apt-get update -y && \ 
-	sudo DEBIAN_FRONTEND=noninteractive apt-get install mysql-server -y
+RUN  apt-get update -y && \ 
+	 DEBIAN_FRONTEND=noninteractive apt-get install mysql-server -y
 #COPY *.sh setup.sh
 COPY *.sql ocr.sql
 
+# Delete packages
+RUN rm jdk-8u191-linux-x64.tar.gz && \ 
+	rm leptonica-1.79.0.tar.gz && \ 
+	rm 4.1.1.tar.gz
 
 # copy jar, run springboot app
 VOLUME /tmp
